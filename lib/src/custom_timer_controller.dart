@@ -46,7 +46,7 @@ class CustomTimerController extends ChangeNotifier {
   void finish() {
     if (!_disposed) {
       _state = CustomTimerState.finished;
-      onEnd?.call(); /// BİZ EKLEDİK
+      ///onEnd?.call(); /// BİZ EKLEDİK
       notifyListeners();
     }
   }
