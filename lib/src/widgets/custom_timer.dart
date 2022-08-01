@@ -65,7 +65,7 @@ class CustomTimer extends StatefulWidget {
   final void Function(CustomTimerState)? onChangeState;
   
     /// Biz ekledik : Event called after the countdown ends
-  final VoidCallback? onEnd;
+  late VoidCallback? onEnd;
 
   @override
   _CustomTimerState createState() => _CustomTimerState();
