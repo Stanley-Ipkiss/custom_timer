@@ -10,9 +10,6 @@ class CustomTimerController extends ChangeNotifier {
   /// Defines the initial state of the timer. By default it is `CustomTimerState.reset`
   final CustomTimerState initialState;
   
-  /// BİZ EKLEDİK : Event called after the countdown ends
-  final VoidCallback? onEnd = print("İİİİİİİİİİİİşte bu kadar...");
-
   late CustomTimerState _state = initialState;
 
   /// Current state of the timer.
@@ -46,7 +43,7 @@ class CustomTimerController extends ChangeNotifier {
   void finish() {
     if (!_disposed) {
       _state = CustomTimerState.finished;
-      onEnd?.call(); /// BİZ EKLEDİK
+      print("BU Kadar");
       notifyListeners();
     }
   }
