@@ -14,7 +14,7 @@ class CustomTimer extends StatefulWidget {
     required this.builder,
     this.stateBuilder,
     this.onChangeState,
-    this.onEnd,
+    required this.onEnd,
   }) : super(key: key);
 
   /// Controls the state of the timer.
