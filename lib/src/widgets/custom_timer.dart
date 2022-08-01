@@ -13,6 +13,7 @@ class CustomTimer extends StatefulWidget {
     required this.builder,
     this.stateBuilder,
     this.onChangeState,
+    this.onEnd,
   }) : super(key: key);
 
   /// Controls the state of the timer.
@@ -59,6 +60,9 @@ class CustomTimer extends StatefulWidget {
   /// Callback function that is executed when the timer status changes.
   /// Returns a `CustomTimerState` to get the current state of the timer, which can be `counting`, `reset`, `paused` or `finished`.
   final void Function(CustomTimerState)? onChangeState;
+  
+  /// Biz ekledik : Event called after the countdown ends
+  final VoidCallback? onEnd;
 
   @override
   _CustomTimerState createState() => _CustomTimerState();
