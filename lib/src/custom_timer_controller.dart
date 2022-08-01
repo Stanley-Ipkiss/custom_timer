@@ -9,12 +9,15 @@ class CustomTimerController extends ChangeNotifier {
 
   /// Defines the initial state of the timer. By default it is `CustomTimerState.reset`
   final CustomTimerState initialState;
+  
+  /// BİZ EKLEDİK : Event called after the countdown ends
+  final VoidCallback? onEnd;
 
   late CustomTimerState _state = initialState;
 
   /// Current state of the timer.
   CustomTimerState get state => _state;
-
+  
   /// Timer pause function.
   void pause() {
     if (!_disposed) {
@@ -43,10 +46,11 @@ class CustomTimerController extends ChangeNotifier {
   void finish() {
     if (!_disposed) {
       _state = CustomTimerState.finished;
+      onEnd?.call(); /// BİZ EKLEDİK
       notifyListeners();
     }
   }
-
+  
   bool _disposed = false;
 
   @override
