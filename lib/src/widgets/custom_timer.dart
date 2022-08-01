@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class CustomTimer extends StatefulWidget {
+  
+    /// Biz ekledik : Event called after the countdown ends
+  final VoidCallback? onEnd;
+  
   /// Creates a customizable timer.
   const CustomTimer({
     Key? key,
@@ -61,8 +65,7 @@ class CustomTimer extends StatefulWidget {
   /// Returns a `CustomTimerState` to get the current state of the timer, which can be `counting`, `reset`, `paused` or `finished`.
   final void Function(CustomTimerState)? onChangeState;
   
-  /// Biz ekledik : Event called after the countdown ends
-  final VoidCallback? onEnd;
+
 
   @override
   _CustomTimerState createState() => _CustomTimerState();
