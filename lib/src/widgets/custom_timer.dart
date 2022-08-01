@@ -74,6 +74,7 @@ class _CustomTimerState extends State<CustomTimer>
   late CustomTimerController _controller;
   late AnimationController _animationController;
   late Animation<int> _animation;
+ late onEnd;
 
   late bool stateBuilder;
 
