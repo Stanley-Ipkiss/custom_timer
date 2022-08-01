@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class CustomTimer extends StatefulWidget {
-  
-
-  
+ 
   /// Creates a customizable timer.
   const CustomTimer({
     Key? key,
@@ -65,7 +63,7 @@ class CustomTimer extends StatefulWidget {
   final void Function(CustomTimerState)? onChangeState;
   
     /// Biz ekledik : Event called after the countdown ends
-  late VoidCallback? onEnd;
+  final VoidCallback? onEnd;
 
   @override
   _CustomTimerState createState() => _CustomTimerState();
