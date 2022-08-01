@@ -5,7 +5,7 @@ enum CustomTimerState { reset, paused, counting, finished }
 
 class CustomTimerController extends ChangeNotifier {
   /// Controller for CustomTimer.
-  CustomTimerController({this.initialState = CustomTimerState.reset});
+  CustomTimerController({this.initialState = CustomTimerState.reset, this.timeOutPath});
 
   /// Defines the initial state of the timer. By default it is `CustomTimerState.reset`
   final CustomTimerState initialState;
@@ -43,7 +43,7 @@ class CustomTimerController extends ChangeNotifier {
   void finish() {
     if (!_disposed) {
       _state = CustomTimerState.finished;
-      print("BU Kadar");
+      Navigator.pushReplacementNamed(context, this.timeOutPath);
       notifyListeners();
     }
   }
