@@ -11,7 +11,7 @@ class CustomTimerController extends ChangeNotifier {
   final CustomTimerState initialState;
   
   /// BİZ EKLEDİK : Event called after the countdown ends
-  final VoidCallback? onEnd;
+  final VoidCallback? onEnd = print("İİİİİİİİİİİİşte bu kadar...");
 
   late CustomTimerState _state = initialState;
 
