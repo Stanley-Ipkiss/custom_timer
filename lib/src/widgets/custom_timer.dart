@@ -13,12 +13,9 @@ class CustomTimer extends StatefulWidget {
     this.animationBuilder,
     required this.builder,
     this.stateBuilder,
-    this.onChangeState,
-    required this.timeOutPath
+    this.onChangeState
   }) : super(key: key);
  
-  final void Function()? timeOutPath;
-
   /// Controls the state of the timer.
   /// It allows obtaining the current `state` and executing the functions `start()`, `pause()` and `reset()`.
   /// Remember to dispose when you are no longer using it.
