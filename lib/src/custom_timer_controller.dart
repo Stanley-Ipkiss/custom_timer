@@ -8,7 +8,7 @@ class CustomTimerController extends ChangeNotifier {
   CustomTimerController({this.initialState = CustomTimerState.reset});
   
   ///final String timeOutPath = '/';
-  final Widget Function(Widget)? timeOutPath;
+  //final Widget Function(Widget)? timeOutPath;
 
   /// Defines the initial state of the timer. By default it is `CustomTimerState.reset`
   final CustomTimerState initialState;
