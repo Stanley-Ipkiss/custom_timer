@@ -5,7 +5,7 @@ enum CustomTimerState { reset, paused, counting, finished }
 
 class CustomTimerController extends ChangeNotifier {
   /// Controller for CustomTimer.
-  CustomTimerController({this.initialState = CustomTimerState.reset, this.timeOutPath});
+  CustomTimerController({this.initialState = CustomTimerState.reset});
   
   ///final String timeOutPath = '/';
   //final Widget Function(Widget)? timeOutPath;
@@ -48,7 +48,7 @@ class CustomTimerController extends ChangeNotifier {
       _state = CustomTimerState.finished;
       ///Navigator.pushReplacementNamed(context, this.timeOutPath);
       ///MaterialPageRoute(builder: (_) => this.timeOutPath);
-      this.timeOutPath();
+      ///this.timeOutPath();
       notifyListeners();
     }
   }
