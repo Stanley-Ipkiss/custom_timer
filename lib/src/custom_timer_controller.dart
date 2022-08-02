@@ -46,7 +46,7 @@ class CustomTimerController extends ChangeNotifier {
     if (!_disposed) {
       _state = CustomTimerState.finished;
       ///Navigator.pushReplacementNamed(context, this.timeOutPath);
-      MaterialPageRoute(builder: (_) => StartScreen());
+      MaterialPageRoute(builder: (_) => this.timeOutPath);
       notifyListeners();
     }
   }
