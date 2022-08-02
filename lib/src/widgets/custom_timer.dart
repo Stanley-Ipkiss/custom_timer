@@ -64,8 +64,6 @@ class CustomTimer extends StatefulWidget {
   /// Returns a `CustomTimerState` to get the current state of the timer, which can be `counting`, `reset`, `paused` or `finished`.
   final void Function(CustomTimerState)? onChangeState;
  
-  final String? timeOutPath;
-  
   @override
   _CustomTimerState createState() => _CustomTimerState();
 }
