@@ -17,7 +17,7 @@ class CustomTimer extends StatefulWidget {
     required this.timeOutPath
   }) : super(key: key);
  
- final Widget Function(Widget)? timeOutPath;
+ void timeOutPath(String name) => print(name);
 
   /// Controls the state of the timer.
   /// It allows obtaining the current `state` and executing the functions `start()`, `pause()` and `reset()`.
