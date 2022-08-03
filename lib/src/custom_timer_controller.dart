@@ -9,7 +9,7 @@ class CustomTimerController extends ChangeNotifier {
   
   ///final String timeOutPath = '/';
   //final Widget Function(Widget)? timeOutPath;
-  void timeOutPath() => print("name");
+  ///void timeOutPath() => print("name");
 
   /// Defines the initial state of the timer. By default it is `CustomTimerState.reset`
   final CustomTimerState initialState;
@@ -49,7 +49,7 @@ class CustomTimerController extends ChangeNotifier {
       _state = CustomTimerState.finished;
       ///Navigator.pushReplacementNamed(context, this.timeOutPath);
       ///MaterialPageRoute(builder: (_) => this.timeOutPath);
-      timeOutPath();
+      ///timeOutPath();
       notifyListeners();
            
     }
