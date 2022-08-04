@@ -5,7 +5,7 @@ enum CustomTimerState { reset, paused, counting, finished }
 
 class CustomTimerController extends ChangeNotifier {
   /// Controller for CustomTimer.
-  CustomTimerController({this.initialState = CustomTimerState.reset});
+  CustomTimerController({this.initialState = CustomTimerState.counting});
   
   ///final String timeOutPath = '/';
   //final Widget Function(Widget)? timeOutPath;
