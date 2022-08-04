@@ -45,10 +45,10 @@ class CustomTimerController extends ChangeNotifier {
 
   /// Timer finish function.
   void finish() {
-
+    if (!_disposed) {
       _state = CustomTimerState.finished;
       notifyListeners();       
-    
+    }
   }
   
   
