@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 /// State for CustomTimer.
 enum CustomTimerState { reset, paused, counting, finished }
 
+enum yeniCustomTimerState { finished }
+
 class CustomTimerController extends ChangeNotifier {
   /// Controller for CustomTimer.
   CustomTimerController({this.initialState = CustomTimerState.counting});
