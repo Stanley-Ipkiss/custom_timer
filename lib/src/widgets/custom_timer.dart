@@ -119,10 +119,12 @@ class _CustomTimerState extends State<CustomTimer>
       else if (state == CustomTimerState.finished) {
         _animationController.stop();
         _animationController.value = 1.0;
+       
+        widget.onChangeState!(state);
       }
     }
 
-    if (widget.onChangeState != null) widget.onChangeState!(state);
+    //if (widget.onChangeState != null) widget.onChangeState!(state);
   }
 
   void updateController(AnimationStatus status) {
